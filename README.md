@@ -6,12 +6,6 @@ ddGrid
   - SCSS mixin for fixed and fluid layouts, for instance you might want to place a fixed pixel div inside of a fluid div
 
 
-Version
-----
-
-1.0
-
-
 How To?
 -----------
 
