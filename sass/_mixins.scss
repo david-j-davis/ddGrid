@@ -1,0 +1,36 @@
+// ==========================================================================
+//   Mixins
+// ========================================================================== 
+
+//==========================
+//Grids: Retreive a grid unit measurment for spaning however many columns:
+//==========================
+
+    //For a fixed grid unit:
+@mixin fixed-grid-unit($span) {
+    float:left;
+    margin-right:$gutter;
+    width: ($column-width * $span) + ($gutter * ($span - 1));
+}
+    //For a fluid grid unit:
+@mixin fluid-grid-unit($span) {
+    float:left;
+    margin-right: 1.250em; //for a percentage use: ($gutter/$max-width) * 100em;
+    width: ((($column-width * $span) + ($gutter * ($span - 1))) / $max-width) * 100% ;
+}
+//===========================
+
+@mixin clearfix {
+ // For modern browsers
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }  &:after {
+    clear:both;
+  }  // For IE 6/7 (trigger hasLayout)
+  & {
+    zoom:1;
+  }
+}
+
